@@ -7,8 +7,8 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
-    fun update() {
-        val simpleDateFormat = SimpleDateFormat("yyyy.MM.dd G 'at' HH:mm:ss z")
+    private fun update() {
+        val simpleDateFormat = SimpleDateFormat("yyyy.MM.dd G 'at' HH:mm:ss z", Locale.US)
         val currentDateAndTime: String = simpleDateFormat.format(Date())
         val textView: TextView = findViewById(R.id.dateAndTime)
         textView.text = currentDateAndTime
